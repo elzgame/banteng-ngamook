@@ -7,17 +7,25 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public float moveSpeed = 3f;
     public float jumpHeight = 5f;
-    public static int healthPoint = 100;
+    public static int health = 3;
+    public GameObject healthParent;
+    public GameObject healthPrefab;
     private int jumpCount = 0;
     private bool buttonKanan;
     private bool buttonKiri;
     public AudioClip soundJump;
     public float rotationZ = 0;
+    private bool changeHealth;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        for (int i = 0; i < health; i++)
+        {
+            var healthObj = Instantiate(healthPrefab, healthParent.transform.position, Quaternion.identity);
+            healthObj.transform.SetParent(healthParent.transform);
+        }
     }
 
     void Update()
@@ -32,13 +40,33 @@ public class Player : MonoBehaviour
 
         rotationZ = transform.rotation.z;
 
-        if(rotationZ <= -0.7f) {
-           transform.rotation = Quaternion.Euler(Vector3.forward * 0f * Time.deltaTime);
-        } 
 
-        if(rotationZ >= 0.7f) {
-           transform.rotation = Quaternion.Euler(Vector3.forward * 0f * Time.deltaTime);
-        } 
+        if (changeHealth == true)
+        {
+            for (int j = 0; j < healthParent.transform.childCount; j++)
+            {
+                Debug.Log(j);
+                Destroy(GameObject.FindGameObjectsWithTag("Lives")[j]);
+            }
+
+            for (int i = 0; i < health; i++)
+            {
+                Debug.Log(i);
+                var healthObj = Instantiate(healthPrefab, healthParent.transform.position, Quaternion.identity);
+                healthObj.transform.SetParent(healthParent.transform);
+            }
+            changeHealth = false;
+        }
+
+        if (rotationZ <= -0.7f)
+        {
+            transform.rotation = Quaternion.Euler(Vector3.forward * 0f * Time.deltaTime);
+        }
+
+        if (rotationZ >= 0.7f)
+        {
+            transform.rotation = Quaternion.Euler(Vector3.forward * 0f * Time.deltaTime);
+        }
 
         if (buttonKanan == true)
         {
@@ -131,7 +159,8 @@ public class Player : MonoBehaviour
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
-            healthPoint -= impact;
+            health -= impact;
+            changeHealth = true;
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
@@ -141,7 +170,8 @@ public class Player : MonoBehaviour
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
-            healthPoint -= impact;
+            health -= impact;
+            changeHealth = true;
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
@@ -151,7 +181,8 @@ public class Player : MonoBehaviour
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
-            healthPoint += impact;
+            health += impact;
+            changeHealth = true;
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
@@ -161,7 +192,8 @@ public class Player : MonoBehaviour
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
-            healthPoint += impact;
+            health += impact;
+            changeHealth = true;
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }

@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rb: {fileID: 0}
-  impactScore: 50
+  impactScore: 1
   sound: {fileID: 8300000, guid: 638522f5f0c549240b716a943dbdb14f, type: 3}
 --- !u!61 &9023293297775924434
 BoxCollider2D:

@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public GameObject lives;
     public GameObject koruptor;
     public Transform spawner;
-    public Text healthPointText;
     public static AudioSource source;
     public GameObject gameOverPanel;
     public AudioClip soundMoo;
@@ -39,8 +38,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        healthPointText.text = "HP : " + Player.healthPoint.ToString();
-        if (Player.healthPoint <= 0)
+        if (Player.health <= 0)
         {
             StartCoroutine(GameOver());
         }
@@ -62,7 +60,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1;
-        Player.healthPoint = 100;
+        Player.health = 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
