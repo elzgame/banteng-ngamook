@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private bool buttonKanan;
     private bool buttonKiri;
     public AudioClip soundJump;
+    public float rotationZ = 0;
 
 
     void Start()
@@ -29,6 +30,15 @@ public class Player : MonoBehaviour
 
         transform.Translate(movement);
 
+        rotationZ = transform.rotation.z;
+
+        if(rotationZ <= -0.7f) {
+           transform.rotation = Quaternion.Euler(Vector3.forward * 0f * Time.deltaTime);
+        } 
+
+        if(rotationZ >= 0.7f) {
+           transform.rotation = Quaternion.Euler(Vector3.forward * 0f * Time.deltaTime);
+        } 
 
         if (buttonKanan == true)
         {

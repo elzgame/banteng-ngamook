@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     public Text healthPointText;
     public static AudioSource source;
     public GameObject gameOverPanel;
-
+    public AudioClip soundMoo;
+    public AudioClip soundSpawn;
 
     void Start()
     {
@@ -25,6 +26,15 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawningLives());
         StartCoroutine(SpawningKoruptor());
         StartCoroutine(SpawningOrangBaik());
+        StartCoroutine(DelayStartSound());
+    }
+
+    IEnumerator DelayStartSound()
+    {
+        yield return new WaitForSeconds(0.5f);
+        source.PlayOneShot(soundMoo);
+        yield return new WaitForSeconds(0.3f);
+        source.PlayOneShot(soundSpawn);
     }
 
     void Update()
