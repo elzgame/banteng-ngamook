@@ -121,7 +121,7 @@ MonoBehaviour:
   moveSpeed: 3
   rb: {fileID: 0}
   impactScore: 1
-  sound: {fileID: 8300000, guid: c2c20ed84d5f6994ba3bb7a16d3515a4, type: 3}
+  sound: {fileID: 8300000, guid: 638522f5f0c549240b716a943dbdb14f, type: 3}
 --- !u!61 &-1876364190230612961
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -41,22 +41,25 @@ public class Player : MonoBehaviour
         rotationZ = transform.rotation.z;
 
 
-        if (changeHealth == true)
-        {
-            for (int j = 0; j < healthParent.transform.childCount; j++)
-            {
-                Debug.Log(j);
-                Destroy(GameObject.FindGameObjectsWithTag("Lives")[j]);
-            }
+        // if (changeHealth == true)
+        // {
+        //     Debug.Log(health);
+        //     for (int j = 0; j < healthParent.transform.childCount; j++)
+        //     {
+        //         Destroy(GameObject.FindGameObjectsWithTag("Lives")[j]);
+        //     }
+        //     // StartCoroutine(HealthDelay());
+        //     changeHealth = false;
+        // }
 
-            for (int i = 0; i < health; i++)
-            {
-                Debug.Log(i);
-                var healthObj = Instantiate(healthPrefab, healthParent.transform.position, Quaternion.identity);
-                healthObj.transform.SetParent(healthParent.transform);
-            }
-            changeHealth = false;
-        }
+        // IEnumerator HealthDelay() {
+        //     yield return new WaitForSeconds(.001f);
+        //     for (int i = 0; i < health; i++)
+        //     {
+        //         var healthObj = Instantiate(healthPrefab, healthParent.transform.position, Quaternion.identity);
+        //         healthObj.transform.SetParent(healthParent.transform);
+        //     }
+        // }
 
         if (rotationZ <= -0.7f)
         {
@@ -160,7 +163,12 @@ public class Player : MonoBehaviour
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
             health -= impact;
-            changeHealth = true;
+
+            for (int i = 0; i < impact; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Lives")[i].gameObject);
+            }
+
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
@@ -170,8 +178,15 @@ public class Player : MonoBehaviour
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
-            health -= impact;
-            changeHealth = true;
+            health += impact;
+
+
+            for (int i = 0; i < impact; i++)
+            {
+                var children = Instantiate(healthPrefab, healthParent.transform);
+                children.transform.SetParent(healthParent.transform);
+            }
+
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
@@ -181,8 +196,14 @@ public class Player : MonoBehaviour
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
-            health += impact;
-            changeHealth = true;
+            health -= impact;
+
+            for (int i = 0; i < impact; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Lives")[i].gameObject);
+            }
+
+
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
@@ -193,7 +214,15 @@ public class Player : MonoBehaviour
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
             health += impact;
-            changeHealth = true;
+
+            for (int i = 0; i < impact; i++)
+            {
+                var children = Instantiate(healthPrefab, healthParent.transform);
+                children.transform.SetParent(healthParent.transform);
+            }
+
+
+
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
