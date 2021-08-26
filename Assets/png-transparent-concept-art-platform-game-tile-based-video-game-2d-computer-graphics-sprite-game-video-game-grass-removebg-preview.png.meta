@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 871e7f230b45b514dbd19932b360532d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8145211160280587944
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_0
+  - first:
+      213: -8263800931543637259
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_1
+  - first:
+      213: -5581140834259406629
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_2
+  - first:
+      213: 5700243646745148309
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_3
+  - first:
+      213: -2141698288870408780
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_4
+  - first:
+      213: -2219700994966129068
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_5
+  - first:
+      213: 6135737661643363977
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_6
+  - first:
+      213: 3207359270812222690
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_7
+  - first:
+      213: 3757951488431688839
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_8
+  - first:
+      213: -7824571717941702031
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_9
+  - first:
+      213: -2148252932601183469
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_10
+  - first:
+      213: -1641116666766945975
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_11
+  - first:
+      213: -2148614458042689163
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_12
+  - first:
+      213: -34533289310996737
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_13
+  - first:
+      213: 7356918024661877647
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_14
+  - first:
+      213: 2605938808677773338
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_15
+  - first:
+      213: -7661640926502061776
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_16
+  - first:
+      213: -166688728581905317
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_17
+  - first:
+      213: 5289478750164392534
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_18
+  - first:
+      213: -6546278412945713406
+    second: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 232
+        width: 67
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851adeada9566fe80800000000000000
+      internalID: -8145211160280587944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 161
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2acc416d4115d80800000000000000
+      internalID: -8263800931543637259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 246
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd07a8c3bfdcb82b0800000000000000
+      internalID: -5581140834259406629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 248
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bfb6145655b1f40800000000000000
+      internalID: 5700243646745148309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 248
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd31d3e0c82742e0800000000000000
+      internalID: -2141698288870408780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 272
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456767f94b90231e0800000000000000
+      internalID: -2219700994966129068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 272
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9861d3d05e4862550800000000000000
+      internalID: 6135737661643363977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 249
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e481d37344d28c20800000000000000
+      internalID: 3207359270812222690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 249
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c0f1fd7fce62430800000000000000
+      internalID: 3757951488431688839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 234
+        width: 60
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17254889a79896390800000000000000
+      internalID: -7824571717941702031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 32
+        width: 67
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3138d98f65fdf22e0800000000000000
+      internalID: -2148252932601183469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 32
+        width: 68
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941126a26159939e0800000000000000
+      internalID: -1641116666766945975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 15
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579d815c8869e22e0800000000000000
+      internalID: -2148614458042689163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 81
+        width: 297
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff631b50820558ff0800000000000000
+      internalID: -34533289310996737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 23
+        width: 70
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83c3adf6f5091660800000000000000
+      internalID: 7356918024661877647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 23
+        width: 69
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10b4a52a872a2420800000000000000
+      internalID: 2605938808677773338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 27
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039ff33ab226ca590800000000000000
+      internalID: -7661640926502061776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 27
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5460d80c7dcfadf0800000000000000
+      internalID: -166688728581905317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 155
+        width: 38
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a968ef5e0086940800000000000000
+      internalID: 5289478750164392534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-concept-art-platform-game-tile-based-video-game-2d-computer-graphics-sprite-game-video-game-grass-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 161
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20710939772f625a0800000000000000
+      internalID: -6546278412945713406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
