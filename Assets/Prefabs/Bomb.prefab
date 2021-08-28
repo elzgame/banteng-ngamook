@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2076377255498456636}
   - component: {fileID: 1324914435332186821}
   - component: {fileID: -1959035450198133446}
-  - component: {fileID: -9217152997363011917}
+  - component: {fileID: -9044931520200285987}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Bomb
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2076377255498456637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.85, y: -0.43, z: 0}
-  m_LocalScale: {x: 2.103, y: 2.103, z: 2.103}
+  m_LocalScale: {x: 0.2594762, y: 0.2594762, z: 0.2594762}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.54082924, b: 0, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: c354d9df1815cb5409bfe60c9cfcb665, type: 3}
+  m_Color: {r: 1, g: 0.019788247, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   impactScore: 1
   sound: {fileID: 8300000, guid: 638522f5f0c549240b716a943dbdb14f, type: 3}
---- !u!61 &-9217152997363011917
-BoxCollider2D:
+--- !u!58 &-9044931520200285987
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,20 +131,10 @@ BoxCollider2D:
   m_GameObject: {fileID: 2076377255498456637}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 2fb1ee63675506340bd8d772bcbc3f4e, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.51, y: -0.66}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 3.76
