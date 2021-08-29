@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5018908109329704878}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Lives
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: fe7a0436020c2584ba3a4f804910d404, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rb: {fileID: 0}
-  impactScore: 1
-  sound: {fileID: 8300000, guid: c2c20ed84d5f6994ba3bb7a16d3515a4, type: 3}
+  impactScore: 0
+  sound: {fileID: 8300000, guid: 3b7de52de13c0484e8423d1de042316f, type: 3}
 --- !u!61 &-5018908109329704878
 BoxCollider2D:
   m_ObjectHideFlags: 0

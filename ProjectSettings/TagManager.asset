@@ -11,6 +11,7 @@ TagManager:
   - OrangBaik
   - Destroy
   - GroundSprite
+  - Weapon
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     public AudioClip soundJump;
     public float rotationZ = 0;
     private bool changeHealth;
+    public GameObject currentItem;
+    public Transform itemPosition;
+    private bool newItemPicked;
 
 
     void Start()
@@ -39,6 +42,15 @@ public class Player : MonoBehaviour
         transform.Translate(movement);
 
         rotationZ = transform.rotation.z;
+
+        if (newItemPicked == true)
+        {
+            newItemPicked = false;
+            var createWeapon = Instantiate(currentItem, itemPosition.transform.position, Quaternion.Euler(0f,180f,0));
+            currentItem.SetActive(true);
+            createWeapon.transform.SetParent(itemPosition.transform);
+            Debug.Log("Item changed!");
+        }
 
 
         // if (changeHealth == true)
@@ -149,7 +161,6 @@ public class Player : MonoBehaviour
         }
     }
 
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ground")
@@ -212,6 +223,7 @@ public class Player : MonoBehaviour
         {
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
+            GameManager.source.PlayOneShot(sound);
             rb.AddForce(Vector2.up * 5f);
             health += impact;
 
@@ -221,12 +233,29 @@ public class Player : MonoBehaviour
                 children.transform.SetParent(healthParent.transform);
             }
 
-
-
-            GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);
         }
 
+        if (other.gameObject.tag == "Weapon")
+        {
+            AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
+            GameManager.source.PlayOneShot(sound);
+            currentItem = other.gameObject;
+            currentItem.transform.localScale = new Vector3(currentItem.transform.localScale.x / 3, currentItem.transform.localScale.y / 3, currentItem.transform.localScale.z);
+            Debug.Log("Weapon picked!");
+            newItemPicked = true;
+            Destroy(other.gameObject.GetComponent<BoxCollider2D>());
+            Destroy(other.gameObject.GetComponent<Rigidbody2D>());
+            Destroy(other.gameObject.GetComponent<MoveToLeft>());
+            StartCoroutine(DestroyNeedTime(other.gameObject));
+        }
+
+    }
+
+    IEnumerator DestroyNeedTime(GameObject x)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Destroy(x.gameObject);
     }
 
 
