@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class Player : MonoBehaviour
     public GameObject currentItem;
     public Transform itemPosition;
     private bool newItemPicked;
+    public TextMeshProUGUI ammoText;
+    private int ammo = 0;
+    public GameObject shootButton;
+    public AudioClip soundShoot;
+    public AudioClip soundUgh;
 
 
     void Start()
@@ -46,11 +52,21 @@ public class Player : MonoBehaviour
         if (newItemPicked == true)
         {
             newItemPicked = false;
-            var createWeapon = Instantiate(currentItem, itemPosition.transform.position, Quaternion.Euler(0f,180f,0));
+            var createWeapon = Instantiate(currentItem, itemPosition.transform.position, Quaternion.Euler(0f, 180f, 0));
             currentItem.SetActive(true);
             createWeapon.transform.SetParent(itemPosition.transform);
             Debug.Log("Item changed!");
         }
+
+        if (currentItem != null)
+        {
+            ammoText.gameObject.SetActive(true);
+            ammoText.text = "AMMO : " + ammo.ToString();
+            shootButton.SetActive(true);
+        }
+
+        ammoText.text = "AMMO : " + ammo.ToString();
+
 
 
         // if (changeHealth == true)
@@ -128,6 +144,15 @@ public class Player : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
         }
 
+    }
+
+
+    public void Shoot()
+    {
+        Debug.Log("TEMBAKKK!");
+        ammo--;
+        GameManager.source.PlayOneShot(soundUgh);
+        GameManager.source.PlayOneShot(soundShoot);
     }
 
     public void KananDown()
@@ -247,6 +272,7 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject.GetComponent<BoxCollider2D>());
             Destroy(other.gameObject.GetComponent<Rigidbody2D>());
             Destroy(other.gameObject.GetComponent<MoveToLeft>());
+            ammo = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             StartCoroutine(DestroyNeedTime(other.gameObject));
         }
 
