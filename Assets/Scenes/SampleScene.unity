@@ -6465,6 +6465,7 @@ MonoBehaviour:
   shootButton: {fileID: 160067768}
   soundShoot: {fileID: 8300000, guid: cb5bbeb2828a33d4a9d8dd6bdd21e1d4, type: 3}
   soundUgh: {fileID: 8300000, guid: 9d5942c44caf07b419059cf1576c4909, type: 3}
+  ammoPrefab: {fileID: 6664126174245201608, guid: ce6b4e9a1f109624ca759f541db5e7d9, type: 3}
 --- !u!95 &1780131213
 Animator:
   serializedVersion: 3

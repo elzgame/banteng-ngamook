@@ -12,6 +12,7 @@ TagManager:
   - Destroy
   - GroundSprite
   - Weapon
+  - Ammo
   layers:
   - Default
   - TransparentFX

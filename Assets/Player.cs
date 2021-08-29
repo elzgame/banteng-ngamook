@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     public GameObject shootButton;
     public AudioClip soundShoot;
     public AudioClip soundUgh;
-
+    public GameObject ammoPrefab;
 
     void Start()
     {
@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
             currentItem.SetActive(true);
             createWeapon.transform.SetParent(itemPosition.transform);
             Debug.Log("Item changed!");
+            currentItem = createWeapon.gameObject;
         }
 
         if (currentItem != null)
@@ -151,6 +152,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("TEMBAKKK!");
         ammo--;
+        Instantiate(ammoPrefab, currentItem.GetComponentInChildren<Transform>().gameObject.transform.position,currentItem.GetComponentInChildren<Transform>().gameObject.transform.rotation);
         GameManager.source.PlayOneShot(soundUgh);
         GameManager.source.PlayOneShot(soundShoot);
     }
