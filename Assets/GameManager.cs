@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public AudioClip soundSpawn;
     private static int distance;
     public TextMeshProUGUI distanceText;
-    public GameObject halanganPrefab;
 
     void Start()
     {
@@ -31,8 +30,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawningOrangBaik());
         StartCoroutine(DelayStartSound());
         StartCoroutine(CountScore());
-        StartCoroutine(Halangan());
-
     }
 
     IEnumerator CountScore()
@@ -88,15 +85,6 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(5, 10));
             Instantiate(bomb, spawner.transform.position, Quaternion.identity);
-        }
-    }
-
-    IEnumerator Halangan()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(Random.Range(5, 10));
-            var create = Instantiate(halanganPrefab, new Vector2(-10, spawner.transform.position.y), Quaternion.identity); 
         }
     }
 

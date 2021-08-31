@@ -17,12 +17,18 @@ public class Peluru : MonoBehaviour
         rb.AddForce(new Vector2(speed, 0f));
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.tag != "Player" && other.gameObject.tag != "Ground" && other.gameObject.tag != "Destroy")
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+        }
+
+        if (other.gameObject.tag == "Destroy")
+        {
+            Destroy(this.gameObject);
+            Debug.Log("Miss!");
         }
     }
 
