@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public AudioClip soundSpawn;
     private static int distance;
     public TextMeshProUGUI distanceText;
+    public Text expText;
 
     void Start()
     {
@@ -64,6 +65,9 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(GameOver());
         }
+
+    expText.text =  "Exp : " + Player.userExp.ToString() + " / 100";
+
     }
 
     IEnumerator GameOver()

@@ -25,6 +25,11 @@ public class Peluru : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        if(other.gameObject.tag == "Bomb" || other.gameObject.tag == "Koruptor") {
+            Debug.Log("Nambah exp 10!");
+            Player.userExp += 10f;
+        }
+
         if (other.gameObject.tag == "Destroy")
         {
             StartCoroutine(MissNotification());

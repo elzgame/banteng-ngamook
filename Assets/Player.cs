@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public AudioClip soundShoot;
     public AudioClip soundUgh;
     public GameObject ammoPrefab;
+    public static float userExp;
 
     void Start()
     {
