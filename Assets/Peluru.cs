@@ -27,10 +27,18 @@ public class Peluru : MonoBehaviour
 
         if (other.gameObject.tag == "Destroy")
         {
-            Destroy(this.gameObject);
+            StartCoroutine(MissNotification());
+            Debug.Log(GameObject.Find("Misses").GetComponentInChildren<RectTransform>(true).gameObject.name);
             Debug.Log("Miss!");
         }
     }
 
+    IEnumerator MissNotification()
+    {
+        GameObject.Find("Misses").GetComponentInChildren<RectTransform>(true).gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(.3f);
+        GameObject.Find("Misses").GetComponentInChildren<RectTransform>(true).gameObject.SetActive(false);
+        Destroy(this.gameObject);
+    }
 
 }

@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
+  missNotif: {fileID: 1948937975182181208, guid: c711f65cecae10b40b197f0a3d770202, type: 3}
+  notifParent: {fileID: 474247486780901039, guid: 5ecd1f19e9565ca4f837eaf5ffa22473, type: 3}
 --- !u!61 &1327590823
 BoxCollider2D:
   m_ObjectHideFlags: 0
