@@ -68,7 +68,18 @@ public class Player : MonoBehaviour
 
         ammoText.text = "AMMO : " + ammo.ToString();
 
-
+        if (ammo <= 0 && currentItem != null)
+        {
+            Destroy(currentItem.gameObject);
+            currentItem = null;
+            shootButton.SetActive(false);
+            ammoText.gameObject.SetActive(false);
+            var banyakSenjata = GameObject.FindGameObjectsWithTag("Weapon").Length;
+            for (int x = 0; x < banyakSenjata; x++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Weapon")[x].gameObject);
+            }
+        }
 
         // if (changeHealth == true)
         // {
@@ -152,7 +163,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("TEMBAKKK!");
         ammo--;
-        Instantiate(ammoPrefab, currentItem.GetComponentInChildren<Transform>().gameObject.transform.position,currentItem.GetComponentInChildren<Transform>().gameObject.transform.rotation);
+        Instantiate(ammoPrefab, currentItem.GetComponentInChildren<Transform>().gameObject.transform.position, currentItem.GetComponentInChildren<Transform>().gameObject.transform.rotation);
         GameManager.source.PlayOneShot(soundUgh);
         GameManager.source.PlayOneShot(soundShoot);
     }
@@ -274,7 +285,7 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject.GetComponent<BoxCollider2D>());
             Destroy(other.gameObject.GetComponent<Rigidbody2D>());
             Destroy(other.gameObject.GetComponent<MoveToLeft>());
-            ammo = other.gameObject.GetComponent<MoveToLeft>().impactScore;
+            ammo += other.gameObject.GetComponent<MoveToLeft>().impactScore;
             StartCoroutine(DestroyNeedTime(other.gameObject));
         }
 

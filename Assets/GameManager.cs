@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject bomb;
     public GameObject lives;
     public GameObject koruptor;
+    public GameObject weapon;
     public Transform spawner;
     public static AudioSource source;
     public GameObject gameOverPanel;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         source = GetComponent<AudioSource>();
         StartCoroutine(SpawningBomb());
+        StartCoroutine(SpawningWeapon());
         StartCoroutine(SpawningLives());
         StartCoroutine(SpawningKoruptor());
         StartCoroutine(SpawningOrangBaik());
@@ -87,6 +89,16 @@ public class GameManager : MonoBehaviour
             Instantiate(bomb, spawner.transform.position, Quaternion.identity);
         }
     }
+
+    IEnumerator SpawningWeapon()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(5, 5));
+            Instantiate(weapon, spawner.transform.position, Quaternion.identity);
+        }
+    }
+
 
 
     IEnumerator SpawningLives()
