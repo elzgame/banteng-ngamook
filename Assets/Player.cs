@@ -228,14 +228,9 @@ public class Player : MonoBehaviour
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
             AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
             rb.AddForce(Vector2.up * 5f);
-            health += impact;
 
-
-            for (int i = 0; i < impact; i++)
-            {
-                var children = Instantiate(healthPrefab, healthParent.transform);
-                children.transform.SetParent(healthParent.transform);
-            }
+            Debug.Log("Nambah exp 15!");
+            Player.userExp += 15f;
 
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);

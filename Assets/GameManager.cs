@@ -66,8 +66,6 @@ public class GameManager : MonoBehaviour
             StartCoroutine(GameOver());
         }
 
-    expText.text =  "Exp : " + Player.userExp.ToString() + " / 100";
-
     }
 
     IEnumerator GameOver()

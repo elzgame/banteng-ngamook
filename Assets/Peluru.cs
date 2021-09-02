@@ -25,10 +25,30 @@ public class Peluru : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(other.gameObject.tag == "Bomb" || other.gameObject.tag == "Koruptor") {
+        if (other.gameObject.tag == "Bomb")
+        {
             Debug.Log("Nambah exp 10!");
             Player.userExp += 10f;
         }
+
+        if (other.gameObject.tag == "Koruptor")
+        {
+            Debug.Log("Nambah exp 10!");
+            Player.userExp += 30f;
+        }
+
+        if (other.gameObject.tag == "OrangBaik")
+        {
+            Debug.Log("Duar nyawamu berkurang 1!");
+            Player.health--;
+
+            for (int i = 0; i < 1; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Lives")[i].gameObject);
+            }
+
+        }
+
 
         if (other.gameObject.tag == "Destroy")
         {
