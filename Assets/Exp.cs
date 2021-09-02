@@ -32,8 +32,8 @@ public class Exp : MonoBehaviour
 
         currentLevelText.text = "LEVEL " + currentLevel.ToString();
         maxExpLevelText.text = "EXP : " + Player.userExp.ToString() + " / " + maxExpLevel[currentLevel - 1].ToString();
-        gameObject.transform.localScale = new Vector3(slider.value, 1f, 1f);
         slider.value = Player.userExp / maxExpLevel[currentLevel - 1];
+        gameObject.transform.localScale = new Vector3(slider.value, 1f, 1f);
     }
 
 }
