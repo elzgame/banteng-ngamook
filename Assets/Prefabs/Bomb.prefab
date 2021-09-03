@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rb: {fileID: 0}
-  impactScore: 1
+  impactScore: 2
   sound: {fileID: 8300000, guid: 638522f5f0c549240b716a943dbdb14f, type: 3}
 --- !u!58 &-9044931520200285987
 CircleCollider2D:

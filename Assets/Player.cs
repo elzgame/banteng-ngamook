@@ -229,6 +229,23 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+
+        if (other.gameObject.tag == "Manuk")
+        {
+            int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;
+            AudioClip sound = other.gameObject.GetComponent<MoveToLeft>().sound;
+            rb.AddForce(Vector2.up * 5f);
+            health -= impact;
+
+            for (int i = 0; i < impact; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Lives")[i].gameObject);
+            }
+
+            GameManager.source.PlayOneShot(sound);
+            Destroy(other.gameObject);
+        }
+
         if (other.gameObject.tag == "Koruptor")
         {
             int impact = other.gameObject.GetComponent<MoveToLeft>().impactScore;

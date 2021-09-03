@@ -13,6 +13,7 @@ TagManager:
   - GroundSprite
   - Weapon
   - Ammo
+  - Manuk
   layers:
   - Default
   - TransparentFX
