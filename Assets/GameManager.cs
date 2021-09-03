@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     private static int distance;
     public TextMeshProUGUI distanceText;
     public Text expText;
+    public static float gameSpeed = 1f;
+    public int newSpeed;
 
     void Start()
     {
@@ -35,6 +37,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawningManuk());
         StartCoroutine(DelayStartSound());
         StartCoroutine(CountScore());
+        newSpeed = 10;
+        distance = 0;
     }
 
     IEnumerator CountScore()
@@ -56,6 +60,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+        if(distance >= newSpeed) {
+            gameSpeed += 0.1f;
+            newSpeed += 10;
+            Debug.Log("TAMBAH KECEPATAN : " + gameSpeed);
+        }
+
         distanceText.text = "JARAK : " + distance.ToString() + "M";
 
         if (Player.health <= 0)
@@ -89,7 +100,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(5, 10));
+            yield return new WaitForSeconds(Random.Range(10 / gameSpeed, 12 / gameSpeed));
             Instantiate(bomb, spawner.transform.position, Quaternion.identity);
         }
     }
@@ -98,7 +109,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(3, 14));
+            yield return new WaitForSeconds(Random.Range(6 / gameSpeed, 8 / gameSpeed));
             Instantiate(manuk, new Vector2(spawner.transform.position.x, 3.5f), Quaternion.identity);
         }
     }
@@ -107,7 +118,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(5, 5));
+            yield return new WaitForSeconds(Random.Range(10 / gameSpeed, 25 / gameSpeed));
             Instantiate(weapon, spawner.transform.position, Quaternion.identity);
         }
     }
@@ -118,7 +129,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(10, 20));
+            yield return new WaitForSeconds(Random.Range(15 / gameSpeed, 30 / gameSpeed));
             Instantiate(lives, spawner.transform.position, Quaternion.identity);
         }
     }
@@ -127,7 +138,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(10, 15));
+            yield return new WaitForSeconds(Random.Range(10 / gameSpeed, 15 / gameSpeed));
             Instantiate(koruptor, spawner.transform.position, Quaternion.identity);
         }
     }
@@ -136,7 +147,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(4, 13));
+            yield return new WaitForSeconds(Random.Range(4 / gameSpeed, 7 / gameSpeed));
             Instantiate(orangBaik, spawner.transform.position, Quaternion.identity);
         }
     }

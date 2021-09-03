@@ -3798,6 +3798,7 @@ MonoBehaviour:
   soundSpawn: {fileID: 8300000, guid: cbd2969e67de02c499c473a6f4e57fcc, type: 3}
   distanceText: {fileID: 842490953}
   expText: {fileID: 406485191}
+  newSpeed: 0
 --- !u!82 &904527701
 AudioSource:
   m_ObjectHideFlags: 0
