@@ -26,10 +26,16 @@ public class Player : MonoBehaviour
     public AudioClip soundShoot;
     public AudioClip soundUgh;
     public GameObject ammoPrefab;
-    public static float userExp;
+    public static float userExpPrefs;
+    public static int levelPrefs;
 
     void Start()
     {
+
+        userExpPrefs = PlayerPrefs.GetFloat("userExpPrefs", 0);
+        levelPrefs = PlayerPrefs.GetInt("levelPrefs", 1);
+
+
         rb = GetComponent<Rigidbody2D>();
         for (int i = 0; i < health; i++)
         {
@@ -230,7 +236,7 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * 5f);
 
             Debug.Log("Nambah exp 15!");
-            Player.userExp += 15f;
+            Player.userExpPrefs += 15f;
 
             GameManager.source.PlayOneShot(sound);
             Destroy(other.gameObject);

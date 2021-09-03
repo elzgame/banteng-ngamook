@@ -28,13 +28,13 @@ public class Peluru : MonoBehaviour
         if (other.gameObject.tag == "Bomb")
         {
             Debug.Log("Nambah exp 10!");
-            Player.userExp += 10f;
+            Player.userExpPrefs += 10f;
         }
 
         if (other.gameObject.tag == "Koruptor")
         {
             Debug.Log("Nambah exp 10!");
-            Player.userExp += 30f;
+            Player.userExpPrefs += 30f;
         }
 
         if (other.gameObject.tag == "OrangBaik")
