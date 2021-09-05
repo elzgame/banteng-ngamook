@@ -38,11 +38,12 @@
   <ItemGroup>
      <Compile Include="Assets\Parallax.cs" />
      <Compile Include="Assets\UserPrefs.cs" />
+     <Compile Include="Assets\Exp.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\MoveToLeft.cs" />
      <Compile Include="Assets\Peluru.cs" />
-     <Compile Include="Assets\Exp.cs" />
+     <Compile Include="Assets\Boss.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

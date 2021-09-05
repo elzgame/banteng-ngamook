@@ -12,9 +12,11 @@ public class GameManager : MonoBehaviour
     public GameObject bomb;
     public GameObject lives;
     public GameObject koruptor;
+    public GameObject boss;
     public GameObject weapon;
     public GameObject manuk;
     public Transform spawner;
+    public Transform spawnerBoss;
     public static AudioSource source;
     public GameObject gameOverPanel;
     public AudioClip soundMoo;
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
     public Text expText;
     public static float gameSpeed = 1f;
     public int newSpeed;
+    private bool isBossAlready;
 
     void Start()
     {
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawningWeapon());
         StartCoroutine(SpawningLives());
         StartCoroutine(SpawningKoruptor());
+        StartCoroutine(SpawningBoss());
         StartCoroutine(SpawningOrangBaik());
         StartCoroutine(SpawningManuk());
         StartCoroutine(DelayStartSound());
@@ -61,7 +65,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if(distance >= newSpeed) {
+        if (distance >= newSpeed)
+        {
             gameSpeed += 0.1f;
             newSpeed += 10;
             Debug.Log("TAMBAH KECEPATAN : " + gameSpeed);
@@ -140,6 +145,19 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(10 / gameSpeed, 15 / gameSpeed));
             Instantiate(koruptor, spawner.transform.position, Quaternion.identity);
+        }
+    }
+
+    IEnumerator SpawningBoss()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(5, 10));
+            if (isBossAlready == false)
+            {
+                Instantiate(boss, spawnerBoss.transform.position, Quaternion.identity);
+                isBossAlready = true;
+            }
         }
     }
 
