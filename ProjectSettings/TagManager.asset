@@ -16,6 +16,7 @@ TagManager:
   - Manuk
   - Boss
   - Pembatas
+  - LivesBoss
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1501071261
     locked: 0

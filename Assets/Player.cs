@@ -5,7 +5,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public static Rigidbody2D rb;
     public float moveSpeed = 3f;
     public float jumpHeight = 5f;
     public static int health = 3;
