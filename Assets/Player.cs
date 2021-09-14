@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
         {
             var healthObj = Instantiate(healthPrefab, healthParent.transform.position, Quaternion.identity);
             healthObj.transform.SetParent(healthParent.transform);
+            healthObj.transform.localScale = new Vector3(1f,1f,1f);
         }
     }
 
@@ -288,6 +289,7 @@ public class Player : MonoBehaviour
             {
                 var children = Instantiate(healthPrefab, healthParent.transform);
                 children.transform.SetParent(healthParent.transform);
+                children.transform.localScale = new Vector3(1f,1f,1f);
             }
 
             Destroy(other.gameObject);

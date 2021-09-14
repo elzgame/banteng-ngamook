@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public static float gameSpeed = 1f;
     public int newSpeed;
     private bool isBossAlready;
+    public int bossSpawnDistance;
 
     void Start()
     {
@@ -36,11 +37,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawningWeapon());
         StartCoroutine(SpawningLives());
         StartCoroutine(SpawningKoruptor());
-        StartCoroutine(SpawningBoss());
         StartCoroutine(SpawningOrangBaik());
         StartCoroutine(SpawningManuk());
         StartCoroutine(DelayStartSound());
         StartCoroutine(CountScore());
+        StartCoroutine(SpawningBoss());
         newSpeed = 10;
         distance = 0;
     }
@@ -106,7 +107,10 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(10 / gameSpeed, 12 / gameSpeed));
-            Instantiate(bomb, spawner.transform.position, Quaternion.identity);
+            if (isBossAlready == false)
+            {
+                Instantiate(bomb, spawner.transform.position, Quaternion.identity);
+            }
         }
     }
 
@@ -115,7 +119,10 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(6 / gameSpeed, 8 / gameSpeed));
-            Instantiate(manuk, new Vector2(spawner.transform.position.x, 3.5f), Quaternion.identity);
+            if (isBossAlready == false)
+            {
+                Instantiate(manuk, new Vector2(spawner.transform.position.x, 3.5f), Quaternion.identity);
+            }
         }
     }
 
@@ -124,7 +131,10 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(10 / gameSpeed, 25 / gameSpeed));
-            Instantiate(weapon, spawner.transform.position, Quaternion.identity);
+            if (isBossAlready == false)
+            {
+                Instantiate(weapon, spawner.transform.position, Quaternion.identity);
+            }
         }
     }
 
@@ -135,7 +145,10 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(15 / gameSpeed, 30 / gameSpeed));
-            Instantiate(lives, spawner.transform.position, Quaternion.identity);
+            if (isBossAlready == false)
+            {
+                Instantiate(lives, new Vector2(spawner.transform.position.x, 1.27f), Quaternion.identity);
+            }
         }
     }
 
@@ -144,7 +157,10 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(10 / gameSpeed, 15 / gameSpeed));
-            Instantiate(koruptor, spawner.transform.position, Quaternion.identity);
+            if (isBossAlready == false)
+            {
+                Instantiate(koruptor, spawner.transform.position, Quaternion.identity);
+            }
         }
     }
 
@@ -152,12 +168,17 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(5, 10));
+            int multiplier = 1;
+            int seconds = bossSpawnDistance * multiplier;
+            yield return new WaitForSeconds(seconds);
             if (isBossAlready == false)
             {
                 Instantiate(boss, spawnerBoss.transform.position, Quaternion.identity);
+                multiplier *= 2;
                 isBossAlready = true;
+                Debug.Log("Spawning Boss!");
             }
+
         }
     }
 
@@ -166,7 +187,10 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(4 / gameSpeed, 7 / gameSpeed));
-            Instantiate(orangBaik, spawner.transform.position, Quaternion.identity);
+            if (isBossAlready == false)
+            {
+                Instantiate(orangBaik, spawner.transform.position, Quaternion.identity);
+            }
         }
     }
 

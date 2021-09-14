@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Boss
     - Exp
     - GameManager
     - MoveToLeft
@@ -12,6 +13,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -239,7 +241,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7436}
     - Class: 114
-      Script: {instanceID: 7658}
+      Script: {instanceID: 7576}
+    - Class: 114
+      Script: {instanceID: 7660}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -753,7 +757,7 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
-      Hash: 6387a039e6c8e269a8142e4444b1e305
+      Hash: c4f7f65117a8aff3a91662432a60c5a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1197,6 +1201,12 @@ ScriptsOnlyBuild:
     className: Volume
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss
+  - hash:
+      serializedVersion: 2
       Hash: 36025d42bf23fda83a55bf1429201821
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -1222,4 +1232,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/LENOVO/Desktop/SuryaElz Game/Banteng Ngamook Build/BantengNgamook2.apk
+  playerPath: C:/Users/LENOVO/Desktop/SuryaElz Game/Banteng Ngamook Build/BantengNgamook4.apk
